@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Linear-Data-Structures-Lab-Skeleton",
-    "\\Linear-Data-Structures-Lab-Skeleton\\Problem03.Queue"
+    "\\Linear-Data-Structures-Exercise-Skeleton",
+    "\\Linear-Data-Structures-Exercise-Skeleton\\04.BalancedParentheses"
   ],
-  "SelectedNode": "\\Linear-Data-Structures-Lab-Skeleton\\Problem03.Queue\\Queue.cs",
+  "SelectedNode": "\\Linear-Data-Structures-Exercise-Skeleton\\04.BalancedParentheses\\BalancedParenthesesSolve.cs",
   "PreviewInSolutionExplorer": true
 }

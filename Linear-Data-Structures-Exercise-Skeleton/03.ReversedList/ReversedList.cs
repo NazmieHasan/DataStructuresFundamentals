@@ -1,20 +1,23 @@
-﻿namespace Problem01.List
+﻿namespace Problem03.ReversedList
 {
     using System;
     using System.Collections;
     using System.Collections.Generic;
 
-    public class List<T> : IAbstractList<T>
+    public class ReversedList<T> : IAbstractList<T>
     {
-        private const int DEFAULT_CAPACITY = 4;
+        private const int DefaultCapacity = 4;
+
         private T[] _items;
 
-        public List(int capacity = DEFAULT_CAPACITY)
+        public ReversedList()
+            : this(DefaultCapacity) { }
+
+
+        public ReversedList(int capacity)
         {
-            if (capacity <= 0) 
-            {
-                throw new IndexOutOfRangeException($"{capacity} is not a valid capacity!");
-            }
+            if (capacity < 0)
+                throw new ArgumentOutOfRangeException(nameof(capacity));
 
             this._items = new T[capacity];
         }
@@ -24,7 +27,7 @@
             get
             {
                 this.ValidateIndex(index);
-                return this._items[index];
+                return this._items[this.Count - 1 - index];
             }
             set
             {
@@ -37,41 +40,40 @@
 
         public void Add(T item)
         {
-            this.EnsureNotEmpty();
+            this.GrowIfNeccessary();
             this._items[this.Count++] = item;
         }
 
         public bool Contains(T item)
         {
-            return this.IndexOf(item) != -1;
+            return this.IndexOf(T item) != -1;
         }
-
 
         public int IndexOf(T item)
         {
-            for (int i = 0; i < this.Count; i++) 
+            for (int i = this.Count - 1; ; i >= 0; i--)
             {
                 if (this._items[i].Equals(item))
                 {
-                    return i;
+                    return this.Count -1 - i;
                 }
             }
 
-            return -1;
+            return -1;   
         }
 
         public void Insert(int index, T item)
         {
+            this.GrowIfNeccessary();
             this.ValidateIndex(index);
-            this.EnsureNotEmpty();
+            int indexToInsert = this.Count - index;
 
-            for (int i = this.Count; i > index; i--) 
+            for (int i = this.Count; i > indexToInsert; i--)
             {
                 this._items[i] = this._items[i - 1];
             }
 
-            this._items[index] = item;
-
+            this._items[indexToInsert] = item;
             this.Count++;
         }
 
@@ -79,67 +81,62 @@
         {
             int indexOfElement = this.IndexOf(item);
 
-            if (indexOfElement == -1) 
+            if (indexOfElement == -1)
             {
                 return false;
             }
 
             this.RemoveAt(indexOfElement);
-
             return true;
         }
 
         public void RemoveAt(int index)
         {
             this.ValidateIndex(index);
-
-            for (int i = index; i < this.Count - 1; i++) 
+            int indexOfEl = this.Count - 1 - index;
+            for (int i = indexOfEl; i < this.Count - 1; i++)
             {
                 this._items[i] = this._items[i + 1];
             }
 
             this._items[this.Count - 1] = default;
-
             this.Count--;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i < this.Count; i++) 
+            for (int i = this.Count - 1; i >= 0; i--)
             {
                 yield return this._items[i];
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator() 
-            => this.GetEnumerator();
-
-        private void EnsureNotEmpty() 
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            if (this.Count == this._items.Length) 
+            return this.GetEnumerator();
+        }
+
+        private void GrowIfNeccessary()
+        {
+            if (this.Count == this._items.Length)
             {
-                Resize();
+                this.Grow();
             }
         }
 
-        private void Resize() 
+        private void Grow()
         {
-            var newArr = new T[this._items.Length * 2];
-            for (int i = 0; i < this._items.Length; i++) 
-            {
-                newArr[i] = this._items[i];
-            }
-
-            this._items = newArr;
+            T[] newItems = new T[this._items.Length * 2];
+            Array.Copy(this._items, newItems, this._items.Length);
+            this._items = newItems;
         }
 
-        private void ValidateIndex(int index) 
+        private void ValidateIndex(int index)
         {
-            if (index < 0 || index >= this.Count) 
+            if (index < 0 || index >= this.Count)
             {
-                throw new IndexOutOfRangeException(nameof(index));
+                throw new IndexOutOfRangeException("Index is out of range!");
             }
         }
-            
     }
 }

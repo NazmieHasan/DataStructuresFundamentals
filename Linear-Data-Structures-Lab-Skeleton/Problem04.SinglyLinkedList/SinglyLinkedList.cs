@@ -53,14 +53,14 @@
 
         public T GetFirst()
         {
-            this.ValidateIfListIsNotEmpty();
+            this.ValidatIfListIsNotEmpty();
             
             return this._head.Value;
         }
 
         public T GetLast()
         {
-            this.ValidateIfListIsNotEmpty();
+            this.ValidatIfListIsNotEmpty();
             Node<T> current = this._head;
 
             while (current.Next != null) 
