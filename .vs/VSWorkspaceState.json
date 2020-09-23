@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Linear-Data-Structures-Exercise-Skeleton",
-    "\\Linear-Data-Structures-Exercise-Skeleton\\04.BalancedParentheses"
+    "\\Trees-Representation-and-Traversal--BFS-and-DFS",
+    "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree",
+    "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree.Tests"
   ],
-  "SelectedNode": "\\Linear-Data-Structures-Exercise-Skeleton\\04.BalancedParentheses\\BalancedParenthesesSolve.cs",
+  "SelectedNode": "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree\\Tree.cs",
   "PreviewInSolutionExplorer": true
 }
