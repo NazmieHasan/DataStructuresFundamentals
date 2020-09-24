@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Trees-Representation-and-Traversal--BFS-and-DFS",
-    "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree",
-    "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree.Tests"
+    "\\Trees-Representation-and-Traversal-Exercise",
+    "\\Trees-Representation-and-Traversal-Exercise\\Tree"
   ],
-  "SelectedNode": "\\Trees-Representation-and-Traversal--BFS-and-DFS\\Tree\\Tree.cs",
+  "SelectedNode": "\\Trees-Representation-and-Traversal-Exercise\\Tree\\TreeFactory.cs",
   "PreviewInSolutionExplorer": true
 }
