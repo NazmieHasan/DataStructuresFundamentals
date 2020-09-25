@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Trees-Representation-and-Traversal-Exercise",
-    "\\Trees-Representation-and-Traversal-Exercise\\Tree"
+    "\\Trees-Representation-and-Traversal-Exercise\\Tree",
+    "\\Trees-Representation-and-Traversal-Exercise\\Tree.Tests"
   ],
-  "SelectedNode": "\\Trees-Representation-and-Traversal-Exercise\\Tree\\TreeFactory.cs",
+  "SelectedNode": "\\Trees-Representation-and-Traversal-Exercise\\Tree.Tests\\TreeTests.cs",
   "PreviewInSolutionExplorer": true
 }

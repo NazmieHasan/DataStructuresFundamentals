@@ -92,6 +92,29 @@ namespace Tree.Tests
             Assert.AreEqual(1, deepestNode.Key);
         }
 
+        [Test]
+        public void TreeDeepestLeftmostNodeShouldWorkCorrectlyWithOtherLevel()
+        {
+            string[] input = new string[]
+            {
+                "7 19",
+                "7 21",
+                "7 14",
+                "19 1",
+                "19 12",
+                "19 31",
+                "14 23",
+                "14 6",
+                "12 77",
+                "31 100"
+            };
+
+            this._treeFactory = new TreeFactory();
+            this._tree = this._treeFactory.CreateTreeFromStrings(input);
+            Tree<int> deepestNode = this._tree.GetDeepestLeftomostNode();
+
+            Assert.AreEqual(77, deepestNode.Key);
+        }
 
         [Test]
         public void TreeLeftmostLongestPathShouldWorkCorrectly()
