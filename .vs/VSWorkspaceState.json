@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Trees-Representation-and-Traversal-Exercise",
-    "\\Trees-Representation-and-Traversal-Exercise\\Tree",
-    "\\Trees-Representation-and-Traversal-Exercise\\Tree.Tests"
+    "\\Heaps-BST-Lab",
+    "\\Heaps-BST-Lab\\04.BinarySearchTree"
   ],
-  "SelectedNode": "\\Trees-Representation-and-Traversal-Exercise\\Tree.Tests\\TreeTests.cs",
+  "SelectedNode": "\\Heaps-BST-Lab\\04.BinarySearchTree\\BinarySearchTree.cs",
   "PreviewInSolutionExplorer": true
 }
