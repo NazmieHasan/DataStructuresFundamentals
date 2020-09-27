@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Heaps-BST-Lab",
-    "\\Heaps-BST-Lab\\04.BinarySearchTree"
+    "\\Heaps-BST-Exercise",
+    "\\Heaps-BST-Exercise\\05.TopView"
   ],
-  "SelectedNode": "\\Heaps-BST-Lab\\04.BinarySearchTree\\BinarySearchTree.cs",
+  "SelectedNode": "\\Heaps-BST-Exercise\\05.TopView\\BinaryTree.cs",
   "PreviewInSolutionExplorer": true
 }
