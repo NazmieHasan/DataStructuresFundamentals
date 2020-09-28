@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Heaps-BST-Exercise",
-    "\\Heaps-BST-Exercise\\05.TopView"
+    "\\Exam-Preparation",
+    "\\Exam-Preparation\\01.Loader",
+    "\\Exam-Preparation\\01.Loader\\Models",
+    "\\Exam-Preparation\\02.Data",
+    "\\Exam-Preparation\\02.Data\\Interfaces",
+    "\\Exam-Preparation\\02.Data\\Models"
   ],
-  "SelectedNode": "\\Heaps-BST-Exercise\\05.TopView\\BinaryTree.cs",
+  "SelectedNode": "\\Exam-Preparation\\02.Data",
   "PreviewInSolutionExplorer": true
 }
